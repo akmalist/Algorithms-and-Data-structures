@@ -72,3 +72,19 @@ function reverse(str) {
     
     
 }
+
+	
+	///////////////////////////////Linear Search O(n)
+	
+function linearSearch(arr, val){
+  for(let i =0; i<arr.length; i++){
+    let mega = arr[i];
+    if(mega===val){
+       return i;
+    } 
+  }
+    return -1;
+ 
+}
+
+linearSearch([2,6,7,9,15],10)
