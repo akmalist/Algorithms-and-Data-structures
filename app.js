@@ -109,7 +109,7 @@ while (arr[middle]!== val && start<=end) {
  if(arr[middle] === val){
         return middle;
     }
- 
+ return -1;
 }
 	
 
