@@ -114,3 +114,26 @@ while (arr[middle]!== val && start<=end) {
 	
 
 binarySearch([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 5);
+	
+	
+///////////////////////// FIND MATCH//////
+	
+function findMatch(str,val){
+   let match = 0;
+  for(let i =0; i<str.length; i++){
+    for(let x = 0; x<val.length; x++){
+  
+       if(val[x]!==str[i+x]){
+         break;
+         
+      }if(x=== val.length-1){
+            console.log(val[x])
+            match++;
+        }
+     }
+  }
+  return match;
+}
+
+
+findMatch("wordakidakidadakiadd","aki")
