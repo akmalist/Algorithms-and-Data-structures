@@ -165,7 +165,9 @@ function bubbleSort(arr){
 	
 	//////////////O(n) version/////////
 
+
 function bubbleSort2(arr){
+  let noSwaps;
   const swap = (arr, first, second)=>{
     [arr[first],arr[second]]= [arr[second],arr[first]];
   };
@@ -174,8 +176,10 @@ function bubbleSort2(arr){
     for(let j=0; j<i-1; j++){
       if(arr[j]>arr[j+1]){
         swap(arr, j, j+1)
+        noSwaps = false;
       }
     }
+    if(noSwaps) break;
   }
 
   return arr;
