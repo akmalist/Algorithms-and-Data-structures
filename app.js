@@ -186,3 +186,47 @@ function bubbleSort2(arr){
 }
 
 bubbleSort2([15,2,99,12,55,25])
+	
+
+	///////////////////////SELECTION SORTING//////
+	
+	
+
+function selectSort(arr){
+ for(let i = 0; i<arr.length; i++){
+    let min =i;
+   for(let j =i+1; j <arr.length; j++){
+     
+     if(arr[j]<arr[min]){
+      min = j;
+     }
+   }
+        if(i !== min){
+          let temp = arr[i];
+          arr[i]=arr[min];
+          arr[min]=temp;
+	}
+ }
+
+ return arr;
+}
+
+function selectSort2(arr){
+  const swap = (arr, index1, index2)=>{
+    ([arr[index1], arr[index2]]= [arr[index2], arr[index1]]);
+  }
+  for(let i=0; i<arr.length; i++){
+    let min =i; 
+     for(let j = i+1; j<arr.length; j++){
+       if(arr[j]<arr[min]){
+         min = j;
+       }
+     }
+     if(i!== min)  swap(arr, i, min)
+     
+
+  }
+  return arr;
+}
+selectSort2([4,24,16,2,12,5,22,6,45])
+
