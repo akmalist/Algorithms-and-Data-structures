@@ -1,3 +1,4 @@
+///////////////Linked List data structure////////////////
 class Node {
   constructor(val){
     this.val = val;
